@@ -23,6 +23,8 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+        "react/prop-types": 0,
+        "no-mixed-operators": "error",
         "no-console": "off",
         "semi": [
         "error",
@@ -31,6 +33,7 @@ module.exports = {
         "quotes": [
         "error",
         "single"
-        ]
+        ],
+        
     }
 };

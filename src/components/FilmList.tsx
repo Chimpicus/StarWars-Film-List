@@ -1,10 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const FilmList = () => {
-    //  vvv - uncomment later on - vvv
-    const { data: films, isPending, error } = useFetch('http://localhost:8000/films');
-
-    return <div className="FilmList">Film List</div>;
+const FilmList = ({ films, title }) => {
+    return (
+        <div className="film-list">
+            <h2>{title}</h2>
+            {films.map((film) => (
+                <div className="film-preview" key={film.id}>
+                    <Link to={`/films/${film.id}`}>
+                        <h2 className="title"> {film.title}</h2>
+                        <p>written by {film.author}</p>
+                    </Link>
+                </div>
+            ))}
+        </div>
+    );
 };
 
 export default FilmList;

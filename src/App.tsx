@@ -6,8 +6,7 @@ import FilmList from './components/FilmList';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
-    console.log('test');
-
+    //
     return (
         <BrowserRouter>
             <div className="App">
